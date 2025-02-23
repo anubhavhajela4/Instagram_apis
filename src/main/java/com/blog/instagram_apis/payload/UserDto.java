@@ -13,7 +13,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class UserDto {
-    private Integer id; // not sure if i should take integer here or uuid (please check) .
+    private UUID id; // not sure if i should take integer here or uuid (please check) UUID HI SAHI HAI.
     @NotBlank(message = "username should not be blank")
     private String username;
     @NotBlank(message = "fullname should not be blank")
