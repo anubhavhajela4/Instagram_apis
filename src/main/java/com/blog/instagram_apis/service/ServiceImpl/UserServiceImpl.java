@@ -13,13 +13,15 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-@Service
+    @Service
     public class UserServiceImpl implements UserService {
 
-        @Autowired
-        private UserRepo userRepo;
-        @Autowired
-        private ModelMapper modelMapper;
+    @Autowired
+    private UserRepo userRepo;
+    @Autowired
+    private ModelMapper modelMapper;
+
+
 
         @Override
         public UserDto createUser(UserDto userDto) {

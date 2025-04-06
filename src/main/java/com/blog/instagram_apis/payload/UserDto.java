@@ -13,16 +13,20 @@ import java.util.UUID;
 @Getter
 @Setter
 public class UserDto {
-    private UUID id; // not sure if i should take integer here or uuid (please check) UUID HI SAHI HAI.
-    @NotBlank(message = "username should not be blank")
+    private UUID id; // UUID is correct, no need to change it to Integer.
+
+    @NotBlank(message = "Username should not be blank")
     private String username;
-    @NotBlank(message = "fullname should not be blank")
+
+    @NotBlank(message = "Fullname should not be blank")
     private String fullname;
-    @Length(min = 5)
+
+    @Length(min = 5, message = "Password must be at least 5 characters long")
     private String password;
-    @Email
+
+    @Email(message = "Invalid email format")
     private String email;
+
     private String profilePicture;
     private String bio;
-
 }
